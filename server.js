@@ -1,6 +1,7 @@
 const express =  require ("express");
 const path = require('path');
 const ejs = require('ejs');
+const cors = require('cors');
 
  
 const app = express();
@@ -10,6 +11,12 @@ const app = express();
 const DB = require("./config/dataBase");
 const connectDB = DB;
 connectDB();
+
+// cors
+const corsOptions ={
+    origin: process.env.AllOWED_CLIENTS.split(',')
+}
+app.use(cors(corsOptions));
 
 //Template engine
 app.set('views', path.join(__dirname, '/views' ));
