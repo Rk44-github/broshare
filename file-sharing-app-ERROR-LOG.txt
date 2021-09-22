@@ -1,4 +1,0 @@
-Error: -UnhandledPromiseRejectionWarning: MongoWriteConcernError: No write concern mode named 'majority\";' found in replica set configuration.
-solution: - Just had to remove the ' ; ' from the Mongo_Connection_URL = "mongodb+srv://Admin-Rk:ffr74i3xk9stcrMY@cluster0.8ee0y.mongodb.net/BroShare?retryWrites=true&w=majority";
-and i just removed it like shown below.
-"mongodb+srv://Admin-Rk:ffr74i3xk9stcrMY@cluster0.8ee0y.mongodb.net/BroShare?retryWrites=true&w=majority"
